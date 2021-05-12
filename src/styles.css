@@ -1,9 +1,35 @@
-.btn,
-.jumbotron,
-.nav :hover {
-  border-radius: 0px;
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
 }
 
-body {
-  background: #343a40;
+.ref-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+}
+
+.ref {
+  padding-bottom: 230px;
+}
+
+.ref-container .footer {
+  height: 230px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.loading-page {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
 }
