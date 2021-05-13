@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { signIn, isAuthenticated, authenticate } from "../auth/helper";
 import Base from "../core/Base";
+import LoadingScreen from "../core/LoadingScreen";
 
 const Signin = () => {
   const [value, setValue] = useState({
@@ -17,18 +18,6 @@ const Signin = () => {
 
   const handleChange = (name) => (event) => {
     setValue({ ...value, error: false, [name]: event.target.value });
-  };
-
-  const loadingMessage = () => {
-    return (
-      loading && (
-        <div className="loading-page">
-          <div class="spinner-border text-secondary" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-        </div>
-      )
-    );
   };
 
   const errorMessage = () => {
@@ -107,9 +96,9 @@ const Signin = () => {
   const performRedirect = () => {
     if (didRedirect) {
       if (user && user.role === 1) {
-        return <p>redirect to admin</p>;
+        return <Redirect to="/admin/dashboard" />;
       } else {
-        return <p>redirect to user</p>;
+        return <Redirect to="/" />;
       }
     }
     if (isAuthenticated()) {
@@ -122,7 +111,7 @@ const Signin = () => {
       <div className="container py-4">
         <h5 className="text-center">Signin</h5>
         <p className="text-center">Enter your credentials to signin</p>
-        {loadingMessage()}
+        {loading && <LoadingScreen />}
         {errorMessage()}
         {signInForm()}
         {performRedirect()}

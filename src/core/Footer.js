@@ -18,6 +18,7 @@ const Footer = () => {
                     href="https://github.com/karthickraja-kr/Merch-Store-frontend"
                     target="_blank"
                     rel="noreferrer"
+                    className="link-dark"
                   >
                     Github
                   </a>
@@ -29,6 +30,7 @@ const Footer = () => {
                     href="https://karthickraja.me"
                     target="_blank"
                     rel="noreferrer"
+                    className="link-dark"
                   >
                     Karthick
                   </a>

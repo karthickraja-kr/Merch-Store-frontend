@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { signUp } from "../auth/helper";
 import Base from "../core/Base";
+import LoadingScreen from "../core/LoadingScreen";
 
 const Signup = () => {
   const [value, setValue] = useState({
@@ -46,17 +47,6 @@ const Signup = () => {
         }
       })
       .catch();
-  };
-  const loadingMessage = () => {
-    return (
-      loading && (
-        <div className="loading-page">
-          <div class="spinner-border text-secondary" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-        </div>
-      )
-    );
   };
 
   const successMessage = () => {
@@ -149,7 +139,7 @@ const Signup = () => {
       <div className="container py-4">
         <h5 className="text-center">Signup</h5>
         <p className="text-center">Create your own account for free</p>
-        {loadingMessage()}
+        {loading && <LoadingScreen />}
         {successMessage()}
         {errorMessage()}
         {SignUpForm()}
