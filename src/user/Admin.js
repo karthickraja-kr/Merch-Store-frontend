@@ -31,6 +31,14 @@ const adminPanelLinks = (history) => {
       </li>
       <li class="nav-item py-2">
         <Link
+          to="/admin/manage/category"
+          className={currentTab(history, "/admin/manage/category")}
+        >
+          Manage Categories
+        </Link>
+      </li>
+      <li class="nav-item py-2">
+        <Link
           to="/admin/create/product"
           className={currentTab(history, "/admin/create/product")}
         >

@@ -11,6 +11,8 @@ import AddCategory from "./admin/AddCategory";
 import AddProduct from "./admin/AddProduct";
 import ManageProduct from "./admin/ManageProducts";
 import Orders from "./admin/Orders";
+import ManageCategory from "./admin/ManageCategory";
+import Cart from "./user/Cart";
 
 const Routes = () => {
   return (
@@ -27,13 +29,18 @@ const Routes = () => {
           component={AddCategory}
         />
         <AdminRoute
+          path="/admin/manage/category"
+          exact
+          component={ManageCategory}
+        />
+        <AdminRoute
           path="/admin/manage/product"
           exact
           component={ManageProduct}
         />
         <AdminRoute path="/admin/manage/order" exact component={Orders} />
         <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} />
-        <PrivateRoute path="/cart" exact component={UserDashBoard} />
+        <PrivateRoute path="/cart" exact component={Cart} />
       </Switch>
     </Router>
   );
