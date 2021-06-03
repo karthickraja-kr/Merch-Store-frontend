@@ -6,6 +6,10 @@ This one is frontend of the merch store and the backend for this store available
 
 ## Website Screenshots
 
+![](images/home.png)
+![](images/adminpanel.png)
+![](images/cart.png)
+
 ## Run this project
 
 In the project directory, you can initialize:
