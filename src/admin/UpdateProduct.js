@@ -27,7 +27,6 @@ const UpdateProduct = ({ productId }) => {
     price,
     stock,
     category,
-    photo,
     loading,
     error,
     success,

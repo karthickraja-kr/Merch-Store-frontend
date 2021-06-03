@@ -26,7 +26,6 @@ const AddProduct = () => {
     stock,
     categories,
     category,
-    photo,
     loading,
     error,
     success,

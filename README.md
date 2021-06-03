@@ -1,7 +1,10 @@
 # Merch Store Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Demo [MERCH STORE](https://merchstore.netlify.app/).
+
 This one is frontend of the merch store and the backend for this store available at [Github](https://github.com/karthickraja-kr/Merch-Store-backend).
+
+## Website Screenshots
 
 ## Run this project
 
