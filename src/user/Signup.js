@@ -46,7 +46,7 @@ const Signup = () => {
           });
         }
       })
-      .catch();
+      .catch((err) => console.log(err));
   };
 
   const successMessage = () => {

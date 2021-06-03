@@ -54,7 +54,7 @@ const Signin = () => {
           });
         }
       })
-      .catch(console.log("Request failed"));
+      .catch((err) => console.log("Request failed"));
   };
 
   const signInForm = () => {
